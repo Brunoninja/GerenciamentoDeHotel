@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{971C1BD3-8B6E-4A4F-B474-BB270E16227C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HopedaJa</RootNamespace>
+    <AssemblyName>HopedaJa</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="apartamentos.cs" />
+    <Compile Include="apartDados.cs" />
+    <Compile Include="DadosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DadosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DadosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DadosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DadosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DadosDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadFuncionario.Designer.cs">
+      <DependentUpon>frmCadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadHospede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadHospede.Designer.cs">
+      <DependentUpon>frmCadHospede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conexao.cs" />
+    <Compile Include="ControleReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleReservas.Designer.cs">
+      <DependentUpon>ControleReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadProduto.Designer.cs">
+      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadQuartos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadQuartos.Designer.cs">
+      <DependentUpon>frmCadQuartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaApart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaApart.Designer.cs">
+      <DependentUpon>frmListaApart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaFunc.Designer.cs">
+      <DependentUpon>frmListaFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaHospede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaHospede.Designer.cs">
+      <DependentUpon>frmListaHospede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaProd.Designer.cs">
+      <DependentUpon>frmListaProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaReserva.Designer.cs">
+      <DependentUpon>frmListaReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaVendas.Designer.cs">
+      <DependentUpon>frmListaVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMapaQuartos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMapaQuartos.Designer.cs">
+      <DependentUpon>frmMapaQuartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecupSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecupSenha.Designer.cs">
+      <DependentUpon>frmRecupSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelFunc.Designer.cs">
+      <DependentUpon>frmRelFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelHospedes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelHospedes.Designer.cs">
+      <DependentUpon>frmRelHospedes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelReserva.Designer.cs">
+      <DependentUpon>frmRelReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeladeAbertura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeladeAbertura.Designer.cs">
+      <DependentUpon>frmTeladeAbertura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVenda.Designer.cs">
+      <DependentUpon>frmVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funcDados.cs" />
+    <Compile Include="funcionario.cs" />
+    <Compile Include="hospede.cs" />
+    <Compile Include="hospedeDados.cs" />
+    <Compile Include="produto.cs" />
+    <Compile Include="produtoDados.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reservaDados.cs" />
+    <Compile Include="reservas.cs" />
+    <Compile Include="venda.cs" />
+    <Compile Include="vendaDados.cs" />
+    <EmbeddedResource Include="frmCadFuncionario.resx">
+      <DependentUpon>frmCadFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadHospede.resx">
+      <DependentUpon>frmCadHospede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleReservas.resx">
+      <DependentUpon>ControleReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadProduto.resx">
+      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadQuartos.resx">
+      <DependentUpon>frmCadQuartos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaApart.resx">
+      <DependentUpon>frmListaApart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaFunc.resx">
+      <DependentUpon>frmListaFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaHospede.resx">
+      <DependentUpon>frmListaHospede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaProd.resx">
+      <DependentUpon>frmListaProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaReserva.resx">
+      <DependentUpon>frmListaReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaVendas.resx">
+      <DependentUpon>frmListaVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMapaQuartos.resx">
+      <DependentUpon>frmMapaQuartos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecupSenha.resx">
+      <DependentUpon>frmRecupSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelFunc.resx">
+      <DependentUpon>frmRelFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelHospedes.resx">
+      <DependentUpon>frmRelHospedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelReserva.resx">
+      <DependentUpon>frmRelReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeladeAbertura.resx">
+      <DependentUpon>frmTeladeAbertura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVenda.resx">
+      <DependentUpon>frmVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rptHospedes.rdlc" />
+    <EmbeddedResource Include="rptRelFunc.rdlc" />
+    <EmbeddedResource Include="rptReservas.rdlc" />
+    <None Include="DadosDataSet.xsc">
+      <DependentUpon>DadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DadosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DadosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DadosDataSet.xss">
+      <DependentUpon>DadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DadosDataSet1.xsc">
+      <DependentUpon>DadosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DadosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DadosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DadosDataSet1.xss">
+      <DependentUpon>DadosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DadosDataSet2.xsc">
+      <DependentUpon>DadosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DadosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DadosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DadosDataSet2.xss">
+      <DependentUpon>DadosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\reservaDados.datasource" />
+    <None Include="Properties\DataSources\reservas.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dados.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dados_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Dados.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\Gnome-Appointment-Soon.ico" />
+    <None Include="Resources\Gnome-X-Office-Spreadsheet.ico" />
+    <None Include="Resources\762688249.png" />
+    <None Include="Resources\Exit.ico" />
+    <None Include="Resources\Gnome-Accessories-Calculator.ico" />
+    <None Include="Resources\ocupado.jpg" />
+    <None Include="Resources\livre.jpg" />
+    <None Include="Resources\cropped-datahotel_512-21.png" />
+    <None Include="Resources\01021.png" />
+    <None Include="Resources\0102.png" />
+    <None Include="Resources\cropped-datahotel_512-2.png" />
+    <None Include="Resources\moderna-forma-ondulada_1035-6610.jpg" />
+    <None Include="Resources\221.jpg" />
+    <None Include="Resources\111.jpg" />
+    <None Include="Resources\22.jpg" />
+    <None Include="Resources\11.jpg" />
+    <None Include="Resources\01.jpg" />
+    <None Include="Resources\basket-full-icon.png" />
+    <None Include="Resources\2000px-Crystal_Clear_app_Login_Manager.svg.png" />
+    <None Include="Resources\businessapplication_distributor_report_document_negocio_2319.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
